@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune</title>
+
+    <!-- Plugins -->
+    <script src="lib/plugins/jquery-3.3.1.min.js"></script>
+    <script src="lib/plugins/jquery-ui.min.js"></script>
+    <script src="lib/plugins/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- config vars JS -->
+    <script src="lib/js/config.js"></script>
+    <script src="lib/js/app.js"></script>
+    <script src="lib/js/quiz.js"></script>
+
+    <!-- Main CSS -->
+    <link href="lib/css/app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="app">
+        <div class="upperBackground"></div>
+        <div class="lowerBackground"></div>
+        <h1>The Wheel of Fortune!</h1>
+        <div class="wheelContainer">
+            <img src="images/bezel.png" class="bezel" alt="">
+            <div class="wheel1"></div>
+            <button id="action" class="spinWheel"></button>
+        </div>
+
+        <div class="key fill-screen">
+            <div class="black-transp fill-screen"></div>
+            <div class="box">
+
+                <div class="choices">
+                    <div class="content">
+                        <p class="qCat">
+                            <span class="category"></span></p>
+                        <p class="qText"><span class="question"></span></p>
+                        <div class="answerBox">
+                        </div>
+                        <button id="action2" class="spinAgain"></button>
+                        <p class="feedback">You got it <span class="result1"></span>!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="wheelSpin">
+        <source src="audio/WheelSpin.mp3" type="audio/mpeg"></audio>
+    <audio id="boo">
+        <source src="audio/crowd-boo.mp3" type="audio/mpeg"></audio>
+    <audio id="cheer">
+        <source src="audio/group-applause.mp3" type="audio/mpeg"></audio>
+</body>
+
+</html>
