@@ -150,14 +150,50 @@ background-position: bottom;
     margin: 30px 10%;
     padding: 1.5rem 0;
 	border-radius: 5px;
-	border:1px solid black;
-	background-size: 6%;
-background-position: top right;
-	background-repeat:no-repeat;
+	border:1px solid black;	
 	-webkit-box-shadow: 0px 0px 42px 19px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 42px 19px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 42px 19px rgba(0,0,0,0.75);
 }
+
+.graphic {
+	display: none;
+	width:10%;
+	height:10%;
+	margin:-200px auto 0;
+	z-index: 2;
+	transform:scale(0);
+  transform-origin: 50% 50%;
+  animation: reveal .5s 3s ease-in-out 1 forwards;
+ /*transition: all 3s ease-in-out;*/
+background-size: 100%;
+background-position: center;
+	background-repeat:no-repeat;
+	-webkit-animation: scale 2s;
+	-moz-animation: scale 2s;
+	-ms-animation: scale 2s;
+	-o-animation: scale 2s;
+	animation: scale 2s;
+}
+
+@keyframes scale {
+	from {
+	  -ms-transform: scale(0);
+	  -moz-transform: scale(0);
+	  -webkit-transform: scale(0);
+	  -o-transform: scale(0);
+	  transform: scale(0);
+	}
+	to {
+	  -ms-transform: scale(6);
+	  -moz-transform: scale(6);
+	  -webkit-transform: scale(6);
+	  -o-transform: scale(6);
+	  transform: scale(6);
+	}
+  }
+
+
 .tick{
 	background-image:url(../../images/icon-list-tick-green.svg)
 	}

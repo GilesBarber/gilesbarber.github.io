@@ -11,7 +11,7 @@ $(document).ready(function () {
     document.getElementsByClassName("options").disabled = false;
     $(".options").removeClass("disabled");
     $(".feedback").removeClass("incorrect correct");
-
+    $(".graphic").removeClass("cross tick");
     angles = 0;
     $('.wheel1').animate(
       { deg: 0 },
@@ -115,7 +115,8 @@ $(document).ready(function () {
       shuffle(a);
       $(".answerBox").html(a);
       $(".options").click(function () { returnElement($(this)) })
-      $(".spinAgain,.spinWheel").text("Spin again");
+      $(".spinAgain").text("Next Question");
+      $(".spinWheel").text("Spin again");
       $(".key").show();
     }, 3500);
   });
@@ -135,18 +136,29 @@ $(document).ready(function () {
   function returnElement(element) {
     var clicked = $(element).attr('id');
 
+    $(".graphic").fadeIn("slow");
+    $(".graphic").css("transform", "scale(6)");
+
     if (clicked == "option1") {
-      $(".result1").text("right"); $(".answerBox").addClass("tick");
+      $(".result1").text("right");
+      $(".graphic").addClass("tick")
       $(".feedback").addClass("correct");
       $('#cheer').get(0).play();
 
-    } else { $(".feedback").addClass("incorrect"); $(".result1").text("wrong"); $(".answerBox").addClass("cross"); $('#boo').get(0).play(); }
+    } else {
+      $(".feedback").addClass("incorrect");
+      $(".result1").text("wrong");
+      $(".graphic").addClass("cross");
+      $('#boo').get(0).play();
+    }
     document.getElementById("option1").disabled = true;
     document.getElementById("option2").disabled = true;
     document.getElementById("option3").disabled = true;
     $(".options").addClass("disabled");
     $(".feedback").show();
     $(".spinAgain").css("background-color", "#90ee90");
+
+    setTimeout(function () { $(".graphic").fadeOut("slow"); }, 2000);
   };
 });
 function shuffle(a) {
