@@ -4,25 +4,14 @@ var qNum
 var questionVars
 var catagoriesTotal = 12;
 var questionsTotal = 2;
-/*var defaultAttempts = 1;
-var defaultLifelines = 1;
-var timeLimit = 20; //seconds
-var scorePointsDefault = 100;
-var maxScore = 100;
-var timeouts = [];
-var intHiLight1,timeoutHiLight1;
-var gridColumns = 3;
-var gridRows = 3;
-var gridCurrCol = gridColumns;
-var gridCurrRow = gridRows;
-var colours = {
-    correct:'#54bf6d',
-    incorrect:'#ea5959'
-};
-var userStats = {};
-userStats.scoreCounter = 0;
-userStats.correctAnswers = 0;
-userStats.timeBonus = 0;*/
-
+var userName = "";
+var score = 0;
+var userAttempts = 0;
+var maxAttempts
+var awards = [250, 500, 750, 1000, 2000, 5000]
+var categoryColours = ["#56bad1", "#b0cc44", "#ef719b", "#f0e170"]
+//Assigning false to this var means the user's score is not retained in the leaderboard after reset.
+var multipleUsers = false;
+var prevUsers = [];
 //declare this var in config so you can easily turn on and off the random functionality
 //var shuffleQuestions = true;

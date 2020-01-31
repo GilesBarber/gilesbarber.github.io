@@ -97,9 +97,14 @@ Geography[2] = {
         option3: 'The Thames',
     },
 };
-
-function startquestion() {
-    questionVars = questionBank[qNum];
-    options = qvars.options;
-    feedback = qvars.feedback;
-}
+var leaderboard = [
+    { name: "THE BOSS", points: 5000 },
+    { name: "‘luminati’ Lopes", points: 4500 },
+    { name: "Savvy Simon", points: 3200 },
+    { name: "Studious Solomon", points: 2500 },
+    { name: "Quizmaster Mark", points: 1750 },
+    { name: "Knowledgeable Namrata", points: 1250 },
+    { name: "Critical Krutika", points: 500 },
+    { name: "Mediocre Michael", points: 250 },
+    { name: "David the dunce", points: 0 }
+];

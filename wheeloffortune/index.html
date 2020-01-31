@@ -10,6 +10,9 @@
     <script src="lib/plugins/jquery-3.3.1.min.js"></script>
     <script src="lib/plugins/jquery-ui.min.js"></script>
     <script src="lib/plugins/jquery.ui.touch-punch.min.js"></script>
+    <script src="lib/plugins/html2canvas.min.js"></script>
+    <script src="lib/plugins/Disintegrate-master/disintegrate.js"></script>
+
 
     <!-- config vars JS -->
     <script src="lib/js/config.js"></script>
@@ -21,33 +24,66 @@
 </head>
 
 <body>
+
     <div class="app">
+        <div class="splash">
+            <div class="wheel0"></div>
+            <h1 class="splashTitle">The Wheel of Fortune!</h1>
+        </div>
+        <div class="black-transp fill-screen"></div>
         <div class="upperBackground"></div>
         <div class="lowerBackground"></div>
+        <p class="userPoints">Score: <span id="score"></span></p>
         <h1>The Wheel of Fortune!</h1>
         <div class="wheelContainer">
             <img src="images/bezel.png" class="bezel" alt="">
             <div class="wheel1"></div>
             <button id="action" class="spinWheel"></button>
         </div>
-
-        <div class="key fill-screen">
-            <div class="black-transp fill-screen"></div>
-            <div class="box">
-
-                <div class="choices">
-                    <div class="content">
-                        <p class="qCat">
-                            <span class="category"></span></p>
-                        <p class="qText"><span class="question"></span></p>
-                        <div class="answerBox">
-                        </div>
-                        <button id="action2" class="spinAgain"></button>
-                        <p class="feedback">You got it <span class="result1"></span>!</p>
-                    </div>
+        <div class="howToPlay">
+            <h2>How to Play</h2>
+            <p class="rules">Spin the wheel and answer the trivia question.<br><br>
+                Choose the number of spins you want by entering the number into the box below:</p>
+            <form id="numberForm" name="numberForm" autocomplete="off">
+                <input type="text" id="inputNum" name="numberField" placeholder="" autofocus>
+                <div class="flex">
+                    <p>Checkbox for multi-player mode:</p>
+                    <input type="checkbox" name="multi-player" value="multi-player">
                 </div>
-                <div class="graphic"></div>
+                <input type="submit" id="submitButton1" value="OK">
+            </form>
+        </div>
+        <div class="nameEntry">
+            <h2>Enter your name</h2>
+            <form id="textForm" name="textForm" autocomplete="off">
+                <input type="text" id="inputtext" name="textField" placeholder="" autofocus>
+                <input type="submit" id="submitButton2" value="Let's Go!">
+            </form>
+        </div>
+        <div class="key fill-screen">
+            <!-- <div class="box">-->
+            <div class="choices" data-dis-container>
+                <p class="qCat">
+                    <span class="category"></span>
+                </p>
+                <p data-dis-type="contained" class="prize"></p>
+                <p class="qText"><span class="question"></span></p>
+                <div class="answerBox"></div>
+                <button id="action2" class="spinAgain"></button>
             </div>
+            <div class="leaderBoard">
+                <h2>Leader Board</h2>
+                <div class="ld-row header">
+                    <div class="ld-col rank">Rank</div>
+                    <div class="ld-col name">Name</div>
+                    <div class="ld-col points">Points</div>
+                </div>
+                <div class="leaderboard-list"></div>
+
+            </div>
+            <div class="graphic"></div>
+            <button id="restart">Play again</button>
+            <!--  </div>-->
         </div>
     </div>
     <audio id="wheelSpin">
