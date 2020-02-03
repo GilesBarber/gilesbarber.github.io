@@ -300,6 +300,7 @@ ul{
 .colourVar:nth-of-type(1){color:var(--colour1)}
 .colourVar:nth-of-type(2){color:var(--colour2)}
 .colourVar:nth-of-type(3){color:var(--colour3)}
+.colourVar:nth-of-type(4){color:var(--colour4)}
 
 input[type=range] {
   box-sizing: border-box;
@@ -426,7 +427,7 @@ input[type=checkbox] {
 .educational{border: 2px solid var(--colour1);}
 .orthodontic{border: 2px solid var(--colour2);}
 .academic{border: 2px solid var(--colour3)}
-.passionProjects{border: 2px solid var(--colour4)}
+.passionprojects{border: 2px solid var(--colour4)}
 
 .resultItems:hover {
   background-color: #cdc;
@@ -439,6 +440,9 @@ input[type=checkbox] {
   padding-top: 160px;
 }
 
+#PPRO0 a, #PPRO1 a{
+  padding-top: 140px;
+}
 .resultItems p {
   font-size: 0.7em;
   margin-top: 5px;
