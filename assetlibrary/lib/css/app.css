@@ -427,7 +427,7 @@ input[type=checkbox] {
 .educational{border: 2px solid var(--colour1);}
 .orthodontic{border: 2px solid var(--colour2);}
 .academic{border: 2px solid var(--colour3)}
-.passionprojects{border: 2px solid var(--colour4)}
+.personal{border: 2px solid var(--colour4)}
 
 .resultItems:hover {
   background-color: #cdc;
@@ -440,7 +440,7 @@ input[type=checkbox] {
   padding-top: 160px;
 }
 
-#PPRO0 a, #PPRO1 a{
+#PERS0 a, #PERS1 a{
   padding-top: 140px;
 }
 .resultItems p {

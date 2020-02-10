@@ -1,4 +1,6 @@
 [
+   { "title": "dotNative","description": "Online Data Course", "type": "educational", "daysToBuild": 10, "keywords": [ "AVADO","Moodle","data","bitesize" ], "url": "https://www.dotnative.com/", "thumbnail": "./imgs/dotNative.jpg" },
+   { "title": "Squared Online","description": "Online Marketing Course", "type": "educational", "daysToBuild": 10, "keywords": [ "AVADO","Google","marketing","Moodle" ], "url": "https://www.wearesquared.com/", "thumbnail": "./imgs/squaredOnline.jpg" },
    { "title": "Mouse and Me!","description": "ELT Student's Site", "type": "educational", "daysToBuild": 1, "keywords": [ "OUP","Student's Site" ], "url": "http://www.oup.com/elt/mouseandme", "thumbnail": "http://gilesbarber.com/wp-content/uploads/2017/05/mouseandme.jpg" },
       { "title": "Shine On!","description": "ELT Student's Site", "type": "educational", "daysToBuild": 2, "keywords": [ "OUP","Student's Site" ], "url": "http://www.oup.com/elt/shineonitaly", "thumbnail": "http://gilesbarber.com/wp-content/uploads/2017/01/shineon.jpg" },
       { "title": "Starlight","description": "ELT Student's Site", "type": "educational", "daysToBuild": 3, "keywords": [ "OUP","Student's Site" ], "url": "http://www.oup.com/elt/starlight", "thumbnail": "http://gilesbarber.com/wp-content/uploads/2017/01/starlight.jpg" },
