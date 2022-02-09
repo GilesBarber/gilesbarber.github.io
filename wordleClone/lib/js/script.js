@@ -9,6 +9,7 @@ const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
 const targetWord = targetWords[Math.floor(dayOffset)]
 const srfeedback = document.getElementById("srfeedback")
+const totalWords = [...targetWords, ...dictionary]
 console.log(targetWord)
 
 startInteraction()
@@ -88,7 +89,7 @@ function submitGuess(){
         return word + tile.dataset.letter
     },"")
 
-    if(!targetWords.includes(guess) && !dictionary.includes(guess)){
+    if(!totalWords.includes(guess)){
         showAlert("Not in word list")
         srfeedback.innerHTML = "Not in word list"
         shakeTiles(activeTiles);        
