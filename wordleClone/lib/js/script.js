@@ -1,4 +1,3 @@
-// const JSON_FILENAME = dictionary
 const guessGrid = document.querySelector("[data-guess-grid]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const keyboard = document.querySelector("[data-keyboard]")
@@ -8,21 +7,9 @@ const DANCE_ANIMATION_DURATION = 500
 const offsetFromDate = new Date(2022, 1, 1)
 const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
-const targetWords = dictionary
-const targetWord = dictionary[Math.floor(dayOffset)]
+const targetWord = targetWords[Math.floor(dayOffset)]
 const srfeedback = document.getElementById("srfeedback")
 console.log(targetWord)
-
-// initialiseLib(dictionary)
-
-// function initialiseLib(result) {    
-//     console.log(targetWord);
-//     // $.getJSON("../data/" + fileJSON + ".json", function (result) {
-        
-//     // //   populate(result);
-//     // //   libraries[fileJSON] = result;
-//     // });
-//   }
 
 startInteraction()
 
@@ -67,7 +54,7 @@ function handleKeyPress(e){
     if(e.key.match(/^[a-z]$/)){
         pressKey(e.key)
         return
-    }
+    }   
 }
 
 function pressKey(key){
@@ -76,7 +63,7 @@ if(activeTiles.length>=wordLength) return
  const nextTile = guessGrid.querySelector(":not([data-letter])")
  nextTile.dataset.letter = key.toLowerCase()
  nextTile.textContent = key;
- nextTile.dataset.state = "active"
+ nextTile.dataset.state = "active" 
 }
 
 function deleteKey(){
@@ -100,12 +87,11 @@ function submitGuess(){
     const guess = activeTiles.reduce((word, tile)=>{
         return word + tile.dataset.letter
     },"")
-    console.log(guess);
 
-    if(!targetWords.includes(guess)){
+    if(!targetWords.includes(guess) && !dictionary.includes(guess)){
         showAlert("Not in word list")
         srfeedback.innerHTML = "Not in word list"
-        shakeTiles(activeTiles);
+        shakeTiles(activeTiles);        
         return
     }
 
