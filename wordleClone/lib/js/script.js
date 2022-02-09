@@ -36,7 +36,7 @@ function handleMouseClick(e){
     }
     
     if(e.target.matches("[data-delete]")){
-        deleteKey()
+        deleteKey();
         return
     }
 }
