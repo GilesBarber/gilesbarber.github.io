@@ -9,7 +9,6 @@
   --tileWrongLocBg: hsl(49, 51%, 47%);
   --tileCorrectBg: hsl(115, 29%, 43%);
   --alertBg: hsl(204, 27%, 85%);
-
   --keyUnselect: hsl(240, 1%, 51%);
 }
 
@@ -24,7 +23,7 @@ body {
   background-color: var(--appBg);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 92vh;
   margin: 0;
   padding: 1em;
   font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
