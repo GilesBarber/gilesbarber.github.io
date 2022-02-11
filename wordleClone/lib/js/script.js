@@ -10,7 +10,12 @@ const dayOffset = msOffset / 1000 / 60 / 60 / 24
 const targetWord = targetWords[Math.floor(dayOffset)]
 const srfeedback = document.getElementById("srfeedback")
 const totalWords = [...targetWords, ...dictionary]
-console.log(targetWord)
+const srArialabel = document.querySelector("[data-srFeedback]")
+const winMessage = `You got it! It was ${targetWord}. Well done.`
+const loseMessage = `You didn't guess the word in time. It was ${targetWord}. Better luck next time.`
+const notWord = "word is not in the dictionary"
+const shortWord = "The word is not long enough"
+let srMessageText
 
 startInteraction()
 
@@ -35,8 +40,8 @@ function handleMouseClick(e){
         return
     }
     
-    if(e.target.matches("[data-delete]")){
-        deleteKey();
+    if(e.target.matches("[data-delete]")){        
+        deleteKey()
         return
     }
 }
@@ -80,7 +85,7 @@ function submitGuess(){
     const activeTiles = [...getActiveTiles()]
     if(activeTiles.length !== wordLength){
         showAlert("Not long enough")
-        srfeedback.innerHTML = "Not long enough"
+        assistiveMessage(shortWord)        
         shakeTiles(activeTiles);
         return
     }
@@ -91,43 +96,49 @@ function submitGuess(){
 
     if(!totalWords.includes(guess)){
         showAlert("Not in word list")
-        srfeedback.innerHTML = "Not in word list"
+        assistiveMessage(notWord)
         shakeTiles(activeTiles);        
         return
     }
 
     stopInteraction()
-    activeTiles.forEach((...params) => flipTile(...params, guess))
 
+    activeTiles.forEach((...params) => flipTile(...params, guess))   
 }
 
 function flipTile(tile, index, array, guess){
     const letter = tile.dataset.letter
     const key = keyboard.querySelector(`[data-key="${letter}"i]`)
+    
     setTimeout(() => {
         tile.classList.add("flip")
     }, index * FLIP_ANIMATION_DURATION / 2);
 
     tile.addEventListener("transitionend", ()=>{
         tile.classList.remove("flip")
-        if(targetWord[index]=== letter){
+        if(targetWord[index]=== letter){            
             tile.dataset.state = "correct"
-            key.classList.add("correct")
+            key.classList.add("correct")        
+           window['string'+index] = `${tile.dataset.letter} is ${tile.dataset.state}`                    
         } else if(targetWord.includes(letter)){
             tile.dataset.state = "wrong-location"
             key.classList.add("wrong-location")
+            window['string'+index] = `${tile.dataset.letter} is in the ${tile.dataset.state}`
         } else{
             tile.dataset.state = "wrong"
             key.classList.add("wrong")
+            window['string'+index] = `${tile.dataset.letter} is ${tile.dataset.state}`
         }
-
+        
         if(index===array.length-1){
             tile.addEventListener("transitionend", ()=>{
            startInteraction()
             checkWinLose(guess, array)                      
-        }, {once:true})
-    }
-    }, {once:true})
+        }, {once:true})  
+        srMessageText = `${string0}, ${string1}, ${string2}, ${string3}, ${string4}.`
+       assistiveMessage(srMessageText)  
+    }    
+    }, {once:true})     
 }
 
 
@@ -151,6 +162,11 @@ setTimeout(() => {
 }, duration);
 }
 
+function assistiveMessage(srMessage) {
+    srfeedback.innerHTML = srMessage
+    srArialabel.ariaLabel = srMessage
+}
+
 function shakeTiles(tiles){
 tiles.forEach(tile =>{
     tile.classList.add("shake")
@@ -163,17 +179,17 @@ tile.classList.remove("shake")
 function checkWinLose(guess, tiles) {
     if(guess===targetWord){
         showAlert("You win!", 5000)
-        srfeedback.innerHTML = "You win!"
         danceTiles(tiles)
-        stopInteraction()        
+        stopInteraction()   
+        assistiveMessage(winMessage)      
         return
     }
 
     const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])")
     if(remainingTiles.length===0){
         showAlert(targetWord.toUpperCase(),null)
-        srfeedback.innerHTML = ("You didn't guess the word in time. It was "+targetWord)
         stopInteraction()
+        assistiveMessage(loseMessage) 
     }
 }
 
