@@ -11,11 +11,14 @@
     <meta name="description" content="Guess the hidden word in 6 attempts.">
 </head>
 <body>
+    
+<header>
     <div class="alert-container" data-alert-container></div>
     <p id="srfeedback" class="sr-only" role="log" aria-live="assertive"></p>
     <div class="sr-only" data-srFeedback aria-label="" tabindex="0"></div>
-
     <h1 class="title">Giles' Wordle clone</h1>
+    </header>
+    <div class="game-conatiner">
     <div class="guess-grid" data-guess-grid>
         <div class="tile" aria-hidden="true"></div>
         <div class="tile" aria-hidden="true"></div>
@@ -84,5 +87,6 @@
               </svg>
         </button>
     </div>
+</div>
 </body>
 </html>
