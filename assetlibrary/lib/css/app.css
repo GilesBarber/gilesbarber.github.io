@@ -426,8 +426,8 @@ input[type=checkbox] {
 }
 .educational{border: 2px solid var(--colour1);}
 .orthodontic{border: 2px solid var(--colour2);}
-.academic{border: 2px solid var(--colour3)}
-.personal{border: 2px solid var(--colour4)}
+.personal{border: 2px solid var(--colour3)}
+/* .academic{border: 2px solid var(--colour4)} */
 
 .resultItems:hover {
   background-color: #cdc;
