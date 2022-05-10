@@ -41,7 +41,9 @@ function PageTransitions(){
         if(id == "about"){
                 progBars.forEach((elem)=>{
                     let percent = elem.dataset.percent
+                    setTimeout(() => {
                     elem.querySelector('.prog-text').innerHTML = percent+"%";
+                }, 1500);
                     setTimeout(() => {
                      elem.querySelector('span').style.width = percent+"%";
                

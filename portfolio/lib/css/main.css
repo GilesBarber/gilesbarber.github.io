@@ -634,6 +634,7 @@ section {
   font-size: 1.5rem;
   color: var(--color-white);
   margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 .portfolio-container .portfolio-item .hover-item .icons {
@@ -970,6 +971,7 @@ section {
 
 .small-text {
   font-size: 0.8rem;
+  padding: 0 0.5rem;
 }
 
 @media screen and (max-width: 1432px) {

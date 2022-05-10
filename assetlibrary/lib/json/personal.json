@@ -1,6 +1,6 @@
 [
-   { "title": "Drag and Drop","description": "Scorable interactive using draggable elements and drop zones", "type": "personal", "daysToBuild": 5, "keywords": [ "Drag","Drop","interactive" ], "url": "https://gilesbarber.github.io/interactive/index.html", "thumbnail": "http://gilesbarber.com/wp-content/uploads/2019/11/dragdrop.jpg" },
-   { "title": "Wheel of Fortune","description": "Trivia quiz in the theme of the popular TV game show", "type": "personal", "daysToBuild": 8, "keywords": [ "Wheel","Fortune","interactive","Game","trivia","quiz" ], "url": "https://gilesbarber.github.io/wheeloffortune/index.html", "thumbnail": "http://gilesbarber.com/wp-content/uploads/2019/11/wheel1.jpg" },
-   { "title": "gilesbarber.com","description": "Personal website and portfolio", "type": "personal", "daysToBuild": 10, "keywords": [ "personal","portfolio","wordpress" ], "url": "http://gilesbarber.com/", "thumbnail": "./imgs/gilesbarber.jpg" }
-      
+   { "title": "Drag and Drop","description": "Scorable interactive using draggable elements and drop zones", "type": "personal", "daysToBuild": 5, "keywords": [ "Drag","Drop","interactive" ], "url": "https://gilesbarber.github.io/interactive/index.html", "thumbnail": "https://gilesbarber.github.io/site_images/dragdrop.jpg" },
+   { "title": "Wheel of Fortune","description": "Trivia quiz in the theme of the popular TV game show", "type": "personal", "daysToBuild": 8, "keywords": [ "Wheel","Fortune","interactive","Game","trivia","quiz" ], "url": "https://gilesbarber.github.io/wheeloffortune/index.html", "thumbnail": "https://gilesbarber.github.io/site_images/wheel1.jpg" },
+   { "title": "Wordle Clone","description": "My attempt to develop a close approximation of Josh Wardle's famous word puzzle", "type": "personal", "daysToBuild": 10, "keywords": [ "Wordle","puzzle","interactive","Game","accessible" ], "url": "https://gilesbarber.github.io/wordleClone/index.html", "thumbnail": "https://gilesbarber.github.io/site_images/wordle.jpg" }
+     
 ]
