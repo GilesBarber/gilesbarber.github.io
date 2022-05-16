@@ -1,0 +1,34 @@
+@import url("https://use.typekit.net/llc0alm.css");
+:root {
+  --font-stack: fieldwork, "Century Gothic", CenturyGothic, AppleGothic,
+     sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+}
+
+button {
+  font: inherit;
+}
+
+.tiles-container {
+  margin: auto;
+  max-width: 100vmin;
+  position: relative;
+  width: 100%;
+}
+.tiles-container ul,
+.tiles-container li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+.tiles-container .button__tile {
+  display: inline-flex;
+  height: 33.3333333333vmin;
+  width: 33.3333333333vmin;
+}/*# sourceMappingURL=style.css.map */

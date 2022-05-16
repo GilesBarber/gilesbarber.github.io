@@ -21,15 +21,20 @@
     --color-grey-4:#454e56;
     --color-grey-5:#2a2a35;
     --color-grey-6:#12181b;
+    --orange-pop: #ff8f00;
+    --light-blue: #009df8;
+    --dark-blue: #005287;
+    --web-bg: #EDEDF5;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15ps rgba(0,0,0,.3);
     --transition: all .4s ease-in-out;
+   --font-stack:'Lato','Open Sans',sans-serif;
 
   
   }
   
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-stack);
     background-color: var(--color-primary);
     font-size: 1.1rem;
     color: var(--color-white);
@@ -40,6 +45,7 @@
   .light-mode{
     --color-primary: #fff;
     --color-secondary: #f56692;
+    --color-secondary: #009df8;
     --color-white: #454e56;
     --color-grey0: #f8f8f8;
     --color-grey-1:#6c7983;
@@ -652,6 +658,7 @@
   .btn-container{
     display: flex;
     align-self: flex-start;
+    margin-top: 1rem;
   }
 
   .main-btn{

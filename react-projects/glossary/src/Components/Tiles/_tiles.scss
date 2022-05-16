@@ -1,0 +1,23 @@
+$number_tiles: 3;
+
+.tiles-container {
+   margin: auto;
+   max-width: 100vmin;
+   position: relative;
+   width: 100%;
+
+   ul,
+   li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: auto;
+   }
+
+   .button__tile {
+      display: inline-flex;
+      height: calc(100vmin / $number_tiles);
+      width: calc(100vmin / $number_tiles);
+   }
+}
