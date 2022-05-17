@@ -1,4 +1,4 @@
-var Entertainment = {};
+const Entertainment = {};
 
 Entertainment[1] = {
     question: "Parachutes, released in 2000, was the debut album of what British rock band?",
@@ -18,9 +18,9 @@ Entertainment[2] = {
     },
 };
 
-var History = {};
+const history = {};
 
-History[1] = {
+history[1] = {
     question: "In 1952 the United States Air Force created Project Blue Book to study what?",
     responses: {
         option1: 'UFOs',
@@ -29,7 +29,7 @@ History[1] = {
     },
 };
 
-History[2] = {
+history[2] = {
     question: "Who was Henry VIII's first wife?",
     responses: {
         option1: 'Catherine of Aragon',
@@ -38,7 +38,7 @@ History[2] = {
     },
 };
 
-var Sport = {};
+const Sport = {};
 
 Sport[1] = {
     question: "What colour jersey is worn by the winners of each stage of the Tour De France?",
@@ -58,7 +58,7 @@ Sport[2] = {
     },
 };
 
-var ScienceAndNature = {};
+const ScienceAndNature = {};
 
 ScienceAndNature[1] = {
     question: "Which element is found in thermometers?",
@@ -78,7 +78,7 @@ ScienceAndNature[2] = {
     },
 };
 
-var Geography = {};
+const Geography = {};
 
 Geography[1] = {
     question: "Name the largest freshwater lake in the world?",
@@ -97,7 +97,7 @@ Geography[2] = {
         option3: 'The Thames',
     },
 };
-var leaderboard = [
+const leaderboard = [
     { name: "THE BOSS", points: 5000 },
     { name: "‘luminati’ Lopes", points: 4500 },
     { name: "Savvy Simon", points: 3200 },

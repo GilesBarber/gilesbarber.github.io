@@ -1,38 +1,25 @@
 function init() {
-  /// init() start ///
-  console.log(localStorage);
+  /// init start ///
   userAttempts = 0;
   score = 0;
   $('#score').html(score);
   size = leaderboard.length;
 
-  // if (prevUsers[0]) { console.log(prevUsers[0]); }
-  if (!multipleUsers && prevUsers[0]) {
-    // console.log("reset 1st " + prevUsers);
+  if (!multipleUsers && prevUsers[0]) {;
     for (var i = 0; i < size; i++) {
       for (var p = 0; p < prevUsers.length; p++) {
         if (leaderboard[i].name == prevUsers[p]) {
-          //console.log(leaderboard[i].name);
           leaderboard.splice(i, 1);
           i--;
-          //console.log(leaderboard)
         }
       }
       size = leaderboard.length;
     }
   }
-
-  //if (!multipleUsers) { prevUsers = [] }
-  /*if (localStorage.mytext === void (0)) {
-    localStorage.mytext = '';
-  };*/
-
 };
 
 function splashScreen() {
-  /* $('.splash').fadeIn("slow");*/
   $('.splash').addClass("wheelBounce");
-
   $('.wheel0').animate(
     { deg: 2000 },
     {
@@ -56,26 +43,21 @@ function splashScreen() {
 }
 
 function reset() {
-  // console.log(userAttempts, leaderboard, size);
   $('.leaderboard-list').html('');
   if (!multipleUsers) {
-    // console.log("reset 2nd " + prevUsers);
     for (var i = 0; i < size; i++) {
       if (leaderboard[i].name === userName) {
-        // console.log(leaderboard[i].name);
         leaderboard.splice(i, 1);
         size = leaderboard.length;
       }
     }
-  } else {
-    //console.log("reset 3rd " + prevUsers);
-  }
+  } 
 };
 
 function inputNum() {
   $("#inputNum").focus();
   // retrieve value from input
-  var numVal = $('#inputNum').val();
+  let numVal = $('#inputNum').val();
   if (isNaN(numVal)) {
     alert("Please enter a valid number!");
   } else {
@@ -84,7 +66,6 @@ function inputNum() {
     localStorage.myNum = numVal;
     $(".howToPlay").fadeOut("slow");
     nameEntry();
-    //console.log(numVal, maxAttempts);
     return numVal;
   }
 }
@@ -102,7 +83,7 @@ function nameEntry() {
 
 function inputText() {
   // retrieve value from input
-  var textVal = $('#inputtext').val();
+  let textVal = $('#inputtext').val();
 
   if (textVal) {
     userName = textVal
@@ -126,10 +107,10 @@ function startGame() {
   setTimeout(function () { $(".userPoints").fadeIn("slow"); }, 2000);
 };
 
-var newPoints;
+let newPoints;
 
 function setPoints() {
-  var random = Math.floor(Math.random() * awards.length);
+  let random = Math.floor(Math.random() * awards.length);
   newPoints = awards[random]
 }
 function getScore() {
@@ -148,16 +129,16 @@ function generateLeaderBoard() {
   if (multipleUsers) { prevUsers.push(userName); }
   size = leaderboard.length;
   function sortScores() {
-    for (var i = 1; i < totalSize; i++)
-      for (var j = 0; j < i; j++)
+    for (let i = 1; i < totalSize; i++)
+      for (let j = 0; j < i; j++)
         if (leaderboard[i].points > leaderboard[j].points) {
-          var y = leaderboard[i];
+          let y = leaderboard[i];
           leaderboard[i] = leaderboard[j];
           leaderboard[j] = y;
         }
   }
   function outputScores() {
-    var i;
+    let i;
     for (i = 0; i < totalSize; i++) {
       if (leaderboard[i].name == userName) {
         content = '<div class="ld-row user"><div class="ld-col rank">' + (i + 1) + '</div><div class="ld-col name">' + leaderboard[i].name + '</div><div class="ld-col points">' + leaderboard[i].points + '</div></div>';
@@ -171,18 +152,17 @@ function generateLeaderBoard() {
   sortScores();
   outputScores();
   $('.leaderBoard,#restart').fadeIn();
-  // console.log(leaderboard);
 }
 
 
 // wait for document's ready state
 $(document).ready(function () {
   disintegrate.init();
-  var root = document.querySelector(':root');
+  const root = document.querySelector(':root');
   // Get the size of an object
-  var size;
+  let size;
   //var totalSize = size + 1;
-  var content;
+  let content;
 
   splashScreen();
 
@@ -192,7 +172,6 @@ $(document).ready(function () {
     } else {
       multipleUsers = false
     }
-    // console.log(multipleUsers)
   });
 
   $("#numberForm").submit(function (e) {
@@ -202,7 +181,7 @@ $(document).ready(function () {
   });
 
   function getAngle() {
-    var segment = Math.floor(Math.random() * catagoriesTotal);
+    let segment = Math.floor(Math.random() * catagoriesTotal);
     angles = 360 / catagoriesTotal * segment + 360;
     qNum = Math.ceil(Math.random() * questionsTotal);
   }
@@ -211,7 +190,6 @@ $(document).ready(function () {
       $(".qCat,.qText,.answerBox,.key").hide();
       document.getElementsByClassName("options").disabled = false;
       $(".options").removeClass("disabled");
-      //$(".feedback").removeClass("incorrect correct");
       $(".graphic").removeClass("cross tick");
       angles = 0;
       $('.wheel1').animate(
@@ -282,7 +260,7 @@ $(document).ready(function () {
             root.style.setProperty('--categoryColour', categoryColours[2]);
             break;
           default:
-            questionBank = History;
+            questionBank = history;
             $(".category").text("History")
             root.style.setProperty('--categoryColour', categoryColours[3]);
         }
@@ -293,11 +271,11 @@ $(document).ready(function () {
         $(".prize").removeClass("invisible");
         $(".prize").addClass("anim");
         $(".spinAgain").css("background-color", "#f0ffff");
-        var option1 = '<button id="option1" class="options">' + questionVars.responses.option1 + '</button>'
-        var option2 = '<button id="option2" class="options">' + questionVars.responses.option2 + '</button>'
-        var option3 = '<button id="option3" class="options">' + questionVars.responses.option3 + '</button>'
-        var options = [option1, option2, option3]
-        var a = options;
+        let option1 = '<button id="option1" class="options">' + questionVars.responses.option1 + '</button>'
+        let option2 = '<button id="option2" class="options">' + questionVars.responses.option2 + '</button>'
+        let option3 = '<button id="option3" class="options">' + questionVars.responses.option3 + '</button>'
+        let options = [option1, option2, option3]
+        let a = options;
 
         shuffle(a);
         $(".answerBox").html(a);
@@ -335,13 +313,12 @@ $(document).ready(function () {
   });
 
   function returnElement(element) {
-    var clicked = $(element).attr('id');
+    let clicked = $(element).attr('id');
 
     $(".graphic").fadeIn("slow");
     $(".graphic").css("transform", "scale(3)");
 
     if (clicked == "option1") {
-      // $(".feedback").text("Well done, " + userName + "!");
       $(".graphic").addClass("tick")
       $(".feedback").addClass("correct");
       $(".prize").addClass("anim");
@@ -352,8 +329,6 @@ $(document).ready(function () {
       }, 2000);
       score += newPoints;
     } else {
-      // $(".feedback").addClass("incorrect");
-      // $(".feedback").text("Better luck next time");
       $(".graphic").addClass("cross");
       $('#boo').get(0).play();
       $(".prize").addClass("CSS-animation");
@@ -362,7 +337,6 @@ $(document).ready(function () {
     document.getElementById("option2").disabled = true;
     document.getElementById("option3").disabled = true;
     $(".options").addClass("disabled");
-    // $(".feedback").show();
     $(".spinAgain").css("background-color", "#90ee90");
 
     setTimeout(function () { $(".graphic").fadeOut("slow"); }, 1500);
@@ -385,7 +359,7 @@ Object.size = function (obj) {
 };
 */
 function shuffle(a) {
-  var j, x, i;
+  let j, x, i;
   for (i = a.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1));
     x = a[i];
