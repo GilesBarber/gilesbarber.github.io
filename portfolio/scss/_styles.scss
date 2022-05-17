@@ -166,6 +166,16 @@
     }
   }
 
+  .light-mode{
+    .controls{
+      .active-btn{
+        i{
+          color: white;
+        }
+      }
+    }
+  }
+
   .theme-btn{
     top: 5%;
     right: 3%;
@@ -313,7 +323,6 @@
       }
       h4{
         font-size: 2rem;
-        text-transform: uppercase;
       }
     }
   }
@@ -488,6 +497,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 1rem;
         .icon{
           background-color: var(--color-primary);
           border-radius: 50%;
@@ -588,7 +598,6 @@
     h4{
       margin-top: 1rem;
       font-size: 2rem;
-      text-transform: uppercase;
     }
     p{
       margin: 1rem 0;

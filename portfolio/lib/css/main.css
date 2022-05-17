@@ -167,6 +167,10 @@ section {
   pointer-events: none;
 }
 
+.light-mode .controls .active-btn i {
+  color: white;
+}
+
 .theme-btn {
   top: 5%;
   right: 3%;
@@ -314,7 +318,6 @@ section {
 }
 .about-container .left-about h4 {
   font-size: 2rem;
-  text-transform: uppercase;
 }
 
 .about-stats {
@@ -490,6 +493,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 .portfolio-container .portfolio-item .hover-item .icons .icon {
   background-color: var(--color-primary);
@@ -582,7 +586,6 @@ section {
 .contact-content-container .left-contact h4 {
   margin-top: 1rem;
   font-size: 2rem;
-  text-transform: uppercase;
 }
 .contact-content-container .left-contact p {
   margin: 1rem 0;
@@ -791,7 +794,7 @@ section {
     background-color: var(--color-grey-5);
   }
   .controls .control {
-    margin: 0.6rem 1.5rem;
+    margin: 0.6rem 0.5rem;
   }
 }
 @media screen and (max-width: 700px) {
