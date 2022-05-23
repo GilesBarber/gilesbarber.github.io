@@ -1,0 +1,455 @@
+ul {
+   padding-left: 25px;
+}
+
+a:visited {
+   color: white;
+}
+
+.fa,
+.fas {
+   color: var(--indigo);
+}
+
+.fa:hover,
+.fas:hover {
+   color: white;
+}
+
+.regular {
+   font-weight: 300;
+}
+
+.tb {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+
+.td {
+   display: table-cell;
+   height: 100%;
+   vertical-align: middle;
+   text-align: center;
+}
+
+.clear-fix {
+   clear: both;
+}
+
+.img-responsive {
+   width: 100%;
+   max-width: 100%;
+}
+
+.videos {
+   text-align: center;
+}
+
+.relative {
+   position: relative !important;
+}
+
+.popup {
+   position: absolute;
+   z-index: 50;
+   top: 0;
+   left: 0;
+   display: none;
+}
+
+.fill {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.main-container {
+   max-width: 808px;
+   min-height: 606px;
+   width: 100%;
+   margin: auto;
+   position: relative;
+}
+
+#app {
+   display: none;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+}
+
+.cover-screen {
+   display: none;
+   z-index: 10;
+}
+
+#hint {
+   background-color: #fff;
+   position: absolute;
+   top: 2%;
+   left: 2%;
+   padding: 0 15px;
+   width: 40%;
+   border-radius: 7px;
+   -webkit-box-shadow: 2px 0 45px 0 rgba(0, 0, 0, 0.35);
+   -moz-box-shadow: 2px 0 45px 0 rgba(0, 0, 0, 0.35);
+   box-shadow: 2px 0 45px 0 rgba(0, 0, 0, 0.35);
+   z-index: 5;
+}
+
+#map-hint {
+   width: 62%;
+   position: absolute;
+   top: 7%;
+   left: 23%;
+   z-index: 4 !important;
+   pointer-events: none;
+   user-select: none;
+}
+
+.slides {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.nav-btns {
+   font-size: 36px;
+}
+
+.btn-close {
+   background: none;
+   border: 0;
+   cursor: pointer;
+   position: absolute;
+   right: 0;
+   margin-top: -45px;
+}
+
+.btn-close:focus i {
+   color: #b8daff;
+}
+
+.btn-close i {
+   font-size: 22px;
+}
+
+.bgBlack .btn-close i {
+   color: #fff;
+}
+
+.bgImage {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   left: 0;
+}
+
+.pinpoints-div {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.pinpoint,
+.pinpoint:hover {
+   display: block;
+   position: absolute;
+   width: 5.2%;
+   height: 9%;
+   font-size: 2em;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   font-weight: 900;
+   text-align: center;
+   cursor: pointer;
+   transition: all 1s ease-in-out;
+   color: #fff;
+   text-decoration: none;
+   transform-origin: 50% 90%;
+}
+
+.pin-locked {
+   background-image: url("../../imgs/Dot-locked.svg");
+}
+
+.pin-unlocked {
+   background-image: url("../../imgs/Dot-active.svg");
+}
+
+.driver {
+   display: none;
+   position: absolute;
+   width: 52%;
+   left: 500.917px;
+   top: -50%;
+   transform-origin: 100% 0;
+   transform: scale(0.6);
+   transition: transform 1s ease-in-out;
+}
+
+.targets {
+   position: absolute;
+}
+
+/* .black-transp {
+  background-color: rgba(0, 0, 0, 0.8);
+} */
+
+.black-transp2 {
+   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.white-transp {
+   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bgBlue {
+   background-color: #189cd9;
+   color: #fff !important;
+}
+
+.bgPink {
+   background-color: #e72265;
+   color: #fff !important;
+}
+
+.bgYellow {
+   background-color: #f3bf27;
+}
+
+.bgGreen {
+   background-color: #a4c532;
+}
+
+.bgGrey {
+   background-color: #ddd;
+}
+
+.bgBlack {
+   background-color: #373331;
+   color: #fff !important;
+}
+
+.bgLilac {
+   background: #6864e9;
+   color: #fff !important;
+}
+
+.header-img {
+   width: 30%;
+   margin: 2rem auto 1.5rem;
+}
+
+.header-title h2 {
+   position: relative;
+   background-color: #6666cc;
+   padding: 16px;
+   left: -1.3rem;
+   width: 336px;
+   color: white;
+}
+
+.project-info {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.live-class {
+   display: flex;
+   width: 15%;
+   padding: 0;
+   background-size: 10%;
+   background-position: 2% 40%;
+}
+
+.course {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.course-info {
+   padding-left: 20px;
+}
+
+.course-subtitle {
+   font-size: 15px;
+}
+.course-icon {
+   display: block;
+   width: 15%;
+}
+
+.popup .popup-inner {
+   pointer-events: none;
+}
+
+.popup .content-div {
+   background: #fff;
+   width: 335px;
+   min-height: 630px;
+   max-height: 630px;
+   padding: 20px;
+   border-radius: 5px;
+   pointer-events: all;
+   overflow-y: auto;
+   overflow-x: hidden;
+   box-shadow: 2px 0 45px 0 rgba(0, 0, 0, 0.35);
+}
+
+.popup .text {
+   background: #fff;
+   padding: 0 10px;
+}
+
+.popup .main-title h2 {
+   margin: 0.2rem 0;
+   line-height: 1;
+   font-size: 1.8rem;
+}
+
+.popup .text p {
+   margin: 0.6rem 0;
+   font-size: 0.95rem;
+}
+
+.popup .text em {
+   font-size: 0.9rem;
+}
+
+.close-popup {
+   float: right;
+   cursor: pointer;
+   background: var(--non-black);
+}
+.close-popup:hover {
+   background: var(--indigo);
+}
+
+.fas {
+   width: 100%;
+   color: #fff;
+}
+
+.flex {
+   display: flex;
+   align-items: center;
+}
+
+button {
+   background: none;
+   border-radius: 50px !important;
+   color: var(--jade) !important;
+   border: 0;
+   cursor: pointer;
+}
+
+/* button:hover {
+ color: var(--teal) !important;
+ text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+} */
+
+button:disabled,
+.disabled,
+.disabled:hover {
+   color: #ccc !important;
+   text-shadow: none !important;
+   cursor: default;
+   filter: grayscale(100%);
+}
+
+
+button.pinpoint{
+   border: none;
+   outline:none;
+
+}
+
+.pulse {
+   animation: pulse 2s alternate infinite ease-in-out;
+}
+
+.zoomLoop {
+   animation: zoomInOut 1s alternate infinite ease-in-out;
+}
+
+.spinY {
+   animation: spinY 1s infinite;
+}
+
+@keyframes spinY {
+   from {
+   }
+
+   to {
+      transform: rotateY(360deg);
+   }
+}
+
+@keyframes pulse {
+   from {
+   }
+
+   to {
+      color: #e72265;
+      border-color: #e72265;
+   }
+}
+
+@keyframes zoomInOut {
+   from {
+   }
+
+   to {
+      transform: scale(1.05);
+   }
+}
+
+@media screen and(max-device-width: 1400px) and(min-device-width: 480px) {
+   body {
+      font-size: 0.9em;
+   }
+
+   h1 {
+      font-size: 2.2em;
+   }
+
+   h2 {
+      font-size: 1.8em;
+   }
+
+   h3 {
+      font-size: 1.5em;
+   }
+
+   h4 {
+      font-size: 1.2em;
+   }
+
+   .slides .bgImage {
+      width: 860px;
+   }
+
+   .main-container {
+      min-height: 100vh;
+   }
+
+   .slides #hint {
+      width: 50%;
+   }
+}
+
+@media (min-width: 600px) and(max-width:767px) {
+   body {
+      font-size: 0.8em;
+   }
+}

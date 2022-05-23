@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>You are the expert</title>
+
+   <!-- Plugins -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://use.typekit.net/llc0alm.css" />
+
+
+   <!-- Main CSS -->
+   <link href="lib/css/avado-main.css" rel="stylesheet" type="text/css" />
+   <link href="lib/css/app.css" rel="stylesheet" type="text/css" />
+
+   <!-- config vars JS -->
+   <script src="lib/js/config.js"></script>
+
+</head>
+
+<body>
+
+   <div class="main-container">
+
+      <div class="orientation-message">
+         <div class="rotateIcon">
+            <img src="imgs/rotate.svg" alt="" class="img-responsive">
+         </div>
+         <p>This interactive is best viewed in landscape mode</p>
+      </div>
+
+      <div class="main-contents">
+
+
+         <div id="app">
+
+            <div class="crowns-container">
+               <div class="crowns" id="crown1"></div>
+               <div class="crowns" id="crown2"></div>
+               <div class="crowns" id="crown3"></div>
+
+            </div>
+
+            <div class="slides slide1 slide-intro" data-slide-num="1">
+               <div class="gameLogo-div">
+                  <div class="gameLogo"><img src="imgs/YouaretheexpertLogo.svg" alt="" class="img-responsive"></div>
+               </div>
+               <button class="enabled interact btns animate easeOutBack btn-white" id="btn-start" title=""
+                  aria-label="Read interactive instructions">Let's go!
+               </button>
+
+            </div>
+
+            <div class="slides slide2" data-slide-num="2" style="display:none">
+               <div class="instruction-text" tabindex="0"></div>
+               <div class="buttons-div center">
+                  <button class="enabled interact btns" id="btn-start-quiz" title=""
+                     aria-label="Start interactive quiz">Start</button>
+               </div>
+            </div>
+
+            <div class="slides slide3" data-slide-num="3" style="display:none">
+               <div class="bgImage" style="opacity: 1"><img id="sceneIMG" src="imgs/_LightsOff.png"
+                     class="img-responsive" alt="" />
+                  <img src="imgs/ElevatorGlassOverlay.svg" class="glassPane pane1" alt="" />
+                  <img src="imgs/ElevatorGlassOverlay.svg" class="glassPane pane2" alt="" />
+                  <img src="imgs/ElevatorGlassOverlay.svg" class="glassPane pane3" alt="" />
+               </div>
+
+               <div class="textbox animate" style="top: 270px; left: 225px;" data-delay="4000">
+                  <span></span>
+               </div>
+
+               <div class="driver"><img src="imgs/_KiaroBike.svg" class="img-responsive" style="transform: scale(2.1)"
+                     alt="" /></div>
+               <img src="imgs/Bike-01.svg" class="bike" alt="" />
+            </div>
+
+
+            <div class="slides slide4 slide-results" data-slide-num="4" style="display:none;text-align: center; ">
+               <div class="game-complete">
+                  <h1 style="padding: 5px;" tabindex="0">LEADERBOARD</h1>
+                  <div>
+                     <div class="w50">
+                        <div class="head-box correct-answers"></div>
+                     </div>
+
+                     <div class="w50">
+                        <div class="head-box total-points"></div>
+                     </div>
+                  </div>
+
+                  <div class="leaderboard">
+                     <div class="ld-row header">
+                        <div class="ld-col rank">Rank</div>
+                        <div class="ld-col name">Name</div>
+                        <div class="ld-col points">Points</div>
+                     </div>
+                     <table class="leaderboard-list"> </table>
+                  </div>
+               </div>
+               <div class="game-over">
+                  <img src="imgs/_GameOverLogo.svg" class="img-responsive game-over-logo" alt="Game Over" tabindex=0>
+                  <img src="imgs/_Crown-LivesBW.svg" class="img-responsive game-over-crown" alt="">
+               </div>
+               <div class="buttons-div1">
+                  <button class="enabled interact btns btns-right" id="btn-restart" title="">
+                     <i class="fas fa-redo-alt"></i> Play again</button>
+                  <button class="enabled interact btns btns-left" id="btn-feedback" title="">View answers</button>
+               </div>
+
+            </div>
+         </div>
+
+         <div class="key fill-screen">
+            <div class="black-transp2 fill-screen"></div>
+            <div class="box">
+
+               <div class="feedback-list">
+                  <h1>ANSWERS</h1>
+                  <span class="cross">&times;</span>
+                  <div class="content">
+                     <div class="scroll">
+                        <ul class="list"></ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="popup fill-screen">
+            <div class="black-transp2 fill-screen"></div>
+            <table class="fill-screen">
+               <tr style="height: 5%">
+                  <td style="width: 5%"></td>
+                  <td style="width: 90%"></td>
+                  <td style="width: 5%"></td>
+               </tr>
+               <tr style="height: 90%">
+                  <td></td>
+                  <td>
+                     <div class="content">
+                        <div class="question-avatar"></div>
+                        <div class="popup-box">
+                           <div class="tb">
+                              <div class="text td-responsv" tabindex="0">
+                                 <div class="message"></div>
+                                 <div class="instruction-msg"></div>
+                                 <div class="question-text"></div>
+                              </div>
+                              <ul class="optionsDiv">
+                                 <li><button class="options option1">A</button></li>
+                                 <li><button class="options option2">B</button></li>
+                                 <li><button class="options option3">C</button></li>
+                              </ul>
+
+                              <div class="user-avatar"></div>
+                           </div>
+
+                           <p id="srQfeedback" class="sr-only" role="log" aria-live="assertive" tabindex=0></p>
+                           <div class="qFeedback" tabindex="0"></div>
+                           <p id="livesUpdate" class="sr-only" role="log" aria-live="polite" tabindex=0>You have <span
+                                 id="livesCount"></span>
+                              lives remaining.</p>
+                           <div class="buttons-div2 center">
+                              <button class="enabled interact btns" id="btn-try-again" title="">
+                                 <i class="fas fa-redo-alt"></i> Try again</button>
+
+                              <button class="enabled interact btns" id="btn-next-question" title=""
+                                 aria-label="Go to next question">Next
+                                 <i class="fas fa-angle-right"></i>
+                              </button>
+                              <button class="enabled interact btns" id="btn-results" title="">
+                                 <i class="far fa-list-alt"></i> Show Scoreboard</button>
+
+                              <div class="flex checkbox-container">
+
+                                 <p class="center">Timer On: </p>
+                                 <button id="timerCheckbox" aria-label="switch off the timer"></button>
+
+                              </div>
+                              <br>
+                              <button class="enabled interact btns" id="btn-start-quiz" title="">Start</button>
+                              <button class="enabled interact btns" id="btn-enter-name" title="">Submit</button>
+
+
+                           </div>
+
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+               </tr>
+               <tr style="height: 5%">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </table>
+         </div>
+         <button class="enabled interact btns" id="btn-mute" aria-label="Sound on"></button>
+      </div>
+
+   </div>
+
+   </div>
+
+   <audio id="audioBossMusic" class="audioMusic" data-volume="0.5">
+      <source src="audio/BossMusic.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audioBoss-question-sound" class="audioMusic" data-volume="0.5">
+      <source src="audio/Boss-question-sound.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audioCorrect-answer-sound" class="audioMusic" data-volume="0.5">
+      <source src="audio/Correct-answer-sound.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audiGameOverMusic" class="audioMusic" data-volume="0.5">
+      <source src="audio/GameOverMusic.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audioIncorrect-answer-sound" class="audioMusic" data-volume="0.5">
+      <source src="audio/Incorrect-answer-sound.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audioLeaderboardMusic" class="audioMusic" data-volume="0.5">
+      <source src="audio/LeaderboardMusic.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audioMainMusic" class="audioMusic" data-volume="0.5">
+      <source src="audio/MainMusic.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audioMopedSound" class="audioMusic" data-volume="0.5">
+      <source src="audio/MopedSound.mp3" type="audio/mpeg">
+   </audio>
+   <audio id="audioNormal-question-sound" class="audioMusic" data-volume="0.5">
+      <source src="audio/Normal-question-sound.mp3" type="audio/mpeg">
+   </audio>
+
+
+   <script src="lib/js/app.js"></script>
+   <script src="lib/js/quiz.js"></script>
+</body>
+
+</html>

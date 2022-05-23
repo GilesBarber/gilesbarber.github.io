@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 to Zero Game</title>
+
+    <!-- Created by LightBox Studio  -->
+
+    <!-- Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/llc0alm.css" />
+
+    <!-- Main CSS -->
+    <link href="lib/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- config vars JS -->
+    <script src="lib/js/config.js"></script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="bg-animated">
+        <div
+          class="bg-frame frame1"
+          style="background-image: url(imgs/Comp2_00000.jpg)"
+        ></div>
+        <div
+          class="bg-frame frame2"
+          style="background-image: url(imgs/Comp2_00001.jpg)"
+        ></div>
+        <div
+          class="bg-frame frame3"
+          style="background-image: url(imgs/Comp2_00002.jpg)"
+        ></div>
+      </div>
+
+      <div class="orientation-message">
+        <div>
+          <div class="rotateIcon">
+            <img src="imgs/rotate.svg" alt="" class="img-responsive" />
+          </div>
+          <p>
+            To view this interactive in all its glory please rotate your device.
+            Best experienced on a desktop.
+          </p>
+        </div>
+      </div>
+
+      <div id="app">
+        <!-- slide -->
+        <div class="slide" id="slideFirst">
+          <div class="fill flex-wrap">
+            <div class="wrapper">
+              <div class="center">
+                <div class="gameLogo">
+                  <img
+                    src="imgs/Quiz100toZero_Title_01.svg"
+                    alt=""
+                    class="img-responsive"
+                  />
+                </div>
+                <button id="btn-go-to-home-page" class="btns btns-middle btn-home">Let's go!</button>
+              </div>
+            </div>
+          </div>
+          <!-- 
+            <div class="logo"><img src="imgs/avado-logo-stamp.svg" alt="" class="img-responsive"></div>
+ -->
+        </div>
+        <!-- slide -->
+        <div class="slide" id="slideIntro">
+          <div class="fill flex-wrap">
+            <div class="wrapper">
+              <div class="introText flex-justify">
+                <div class="flex-item flex-item__main" style="padding-right: 10px">
+                  <div class="intro-text" tabindex="0">
+                    <h1>How to play</h1>
+                    <p>
+                      Choose the correct answer to each of the 10 questions as
+                      fast as you can. You will be allowed to request extra time
+                      on three questions, so choose those wisely!
+                    </p>
+                    <p>
+                      Your score for each question will be anything from 100 to
+                      zero, which is why we called this game... well, you get
+                      the idea.
+                    </p>
+                  </div>
+                  <div class="center checkbox-container">
+                    <span>Timer On:</span>
+                    <button
+                      id="timerCheckbox"
+                      aria-label="Switch off the timer. Recommended for assistive technology users"
+                    ></button>
+                  </div>
+                  <br />
+                  <div class="center">
+                    <button href="" class="btns btns-middle" id="btn-start">
+                      Play
+                    </button>
+                  </div>
+                </div>
+                <div class="flex-item flex-item__sub">
+                  <div class="introLogo">
+                    <img
+                      src="imgs/PresentingCharacter.svg"
+                      alt=""
+                      class="img-responsive"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gameLogo"></div>
+          </div>
+        </div>
+
+        <!-- slide -->
+        <div class="slide" id="slideQuiz">
+          <div class="fill black-transp3 black-overlay"></div>
+          <div class="fill flex-wrap">
+            <div style="width: 100%">
+              <div class="wrapper flex-center">
+                <div class="sub-wrapper">
+                  <div class="topBar">
+                    <div class="topBarBox">
+                      <div class="questionStats"></div>
+                    </div>
+                  </div>
+                  <div class="questionDiv" tabindex="0">
+                    <div class="questionBox">
+                      <div class="questionText"></div>
+                    </div>
+                  </div>
+                  <div class="optionsDiv">
+                    <!-- <a href="" class="options option1">A</a>
+                           <a href="" class="options option2">B</a>
+                           <a href="" class="options option3">C</a>
+                           <a href="" class="options option4">D</a> -->
+
+                    <ul role="list" class="optionsDiv">
+                      <li>
+                        <button
+                          class="options option1"
+                          aria-setsize="4"
+                          aria-label="1"
+                        >
+                          A
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="options option2"
+                          aria-setsize="4"
+                          aria-posinset="2"
+                        >
+                          B
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="options option3"
+                          aria-setsize="4"
+                          aria-posinset="3"
+                        >
+                          C
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="options option4"
+                          aria-setsize="4"
+                          aria-posinset="4"
+                        >
+                          D
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="timerDiv">
+                  <div class="timerBox">
+                    <div class="timerGraph" id="timerGraph">
+                      <div class="timerText">
+                        <div class="countdown"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blocksFrame">
+                    <div class="timeBlock">
+                      <img
+                        src="imgs/timer-bg.svg"
+                        alt=""
+                        class="triangle-fill img-responsive"
+                      />
+                    </div>
+
+                    <div class="blockBorder">
+                      <img
+                        src="imgs/timer-border.svg"
+                        alt=""
+                        class="triangle-border img-responsive"
+                      />
+                    </div>
+                  </div>
+                  <button id="slowTimerButton" onclick="slowTimer()" disabled>
+                    Extra time
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="topBar"></div>
+          </div>
+        </div>
+
+        <!-- slide -->
+        <div class="slide" id="slideFeedback">
+          <div class="fill flex-wrap">
+            <div class="feedbackDiv">
+              <div class="feedbackBox flex-justify">
+                <div class="characterDiv flex-item">
+                  <div class="character">
+                    <img
+                      src="imgs/GoodCharacter.svg"
+                      alt=""
+                      class="img-responsive charCorrect"
+                    />
+                    <img
+                      src="imgs/UnhappyCharacter.svg"
+                      alt=""
+                      class="img-responsive charIncorrect"
+                    />
+                    <img
+                      src="imgs/UnhappyCharacter2.svg"
+                      alt=""
+                      class="img-responsive charTimeout"
+                    />
+                    <img
+                      src="imgs/PresentingCharacter2.svg"
+                      alt=""
+                      class="img-responsive charPresent"
+                    />
+                    <img
+                      src="imgs/GoodCharacter2.svg"
+                      alt=""
+                      class="img-responsive charOther"
+                    />
+                  </div>
+                </div>
+                <div class="flex-item">
+                  <div class="feedbackText" tabindex="0">
+                    <div class="message"></div>
+                    <br />
+                    <div class="pointsEarnedDiv">
+                      Points Earned
+                      <h2 class="pointsEarned"></h2>
+                    </div>
+                    <br />
+                    <div class="instruction-msg"></div>
+                  </div>
+
+                  <div class="center">
+                    <button class="btns btns-middle" id="btn-next-question">
+                      Next
+                    </button>
+                    <button id="show-my-score" class="btns btns-middle btn-aveScore">
+                      Show me my score
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide -->
+        <div class="slide" id="averageScore">
+          <div class="fill flex-wrap">
+            <div class="wrapper flex-center">
+              <div class="sub-wrapper">
+                <div class="flex-item presenter2">
+                  <div
+                    class="speechbubble__feedback textbox speechbubble animate"
+                    style="width: 26%; top: 10%; right: 50%"
+                    data-delay="500"
+                    tabindex="0"
+                  >
+                    <div
+                      class="speech-arrow arrow-down"
+                      style="bottom: -8%"
+                    ></div>
+                    <span
+                      >“Your average score was
+                      <span class="averagePoints"></span>!<br />Let's find out
+                      what prize you've won ...”</span
+                    >
+                  </div>
+                  <img
+                    src="imgs/PresentingCharacter2.svg"
+                    alt=""
+                    class="img-responsive character charPresent"
+                  />
+                  <button id="show-my-prize" class="btns prize-btn prize-btn--timer-off btns-middle btn-results">
+                    Show me my prize
+                  </button>
+                </div>
+              </div>
+              <div class="flex-item">
+                <div class="timerDiv scoreBar">
+                  <div class="timerBox">
+                    <div class="timerGraph timerText" id="timerGraph">
+                      <div class="averagePoints"></div>
+                    </div>
+                  </div>
+
+                  <div class="blocksFrame">
+                    <div class="timeBlock">
+                      <img
+                        src="imgs/timer-bg.svg"
+                        alt=""
+                        class="triangle-fill img-responsive"
+                      />
+                    </div>
+
+                    <div class="blockBorder">
+                      <img
+                        src="imgs/timer-border.svg"
+                        alt=""
+                        class="triangle-border img-responsive"
+                      />
+                    </div>
+                  </div>
+                  <button id="show-my-prize" class="btns prize-btn btns-middle btn-results">
+                    Show me my prize
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide -->
+
+        <div class="slide" id="prizeAward">
+          <div class="fill black-transp3 black-overlay"></div>
+          <div class="fill flex-wrap">
+            <div class="center">
+              <div class="prizes flex-justify">
+                <div class="flex-item">
+                  <div
+                    class="speechbubble__prize textbox speechbubble animate"
+                    style="width: 26%; top: 8%; right: 51%"
+                    tabindex="0"
+                    data-delay="500"
+                  >
+                    <div
+                      class="speech-arrow arrow-down"
+                      style="bottom: -7%"
+                    ></div>
+                    <span
+                      >“Well done! You have won a
+                      <span id="insertPrize1">waffle maker</span>! Why not play
+                      again and try to beat your score?”</span
+                    >
+                  </div>
+                  <img
+                    src="imgs/PresentingCharacter2.svg"
+                    alt=""
+                    class="img-responsive character charPresent"
+                  />
+                </div>
+                <div
+                  class="flex-item prizeDisplay"
+                  style="max-width: 650px; margin: auto"
+                >
+                  <h3 class="upperCase">your prize</h3>
+                  <div class="underline"></div>
+                  <div class="IMGContainer flex-center">
+                    <img id="prizeImage" src="" alt="" class="img-responsive" />
+                  </div>
+                  <h3 class="upperCase"><span id="insertPrize2"></span></h3>
+                  <div class="endNav flex-justify flex-column">
+                    <button class="btns btns-middle" id="btn-restart" title="">
+                      <i class="fas fa-redo-alt"></i> Play again
+                    </button>
+                    <button class="btns btns-middle" id="btn-feedback" title="">
+                      View answers
+                    </button>
+
+                    <div class="outroText">
+                      <h2>Thank you for playing!</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="slide" id="slideLeaderboard">            
+            <div class="fill flex-wrap">
+               <div class="wrapper">
+                  <div class="leaderboard">
+                     <div class="flex-wrap trophies" style="max-width: 450px; margin:auto">
+                        <div style="width: 33%;padding: 10px;">
+                           <img src="imgs/Silver.svg" alt="" class="img-responsive">
+                        </div>                        <div style="width: 33%;padding: 0px;">
+                           <img src="imgs/Gold.svg" alt="" class="img-responsive">
+                        </div>
+                        <div style="width: 33%;padding: 10px;">
+                           <img src="imgs/Bronze.svg" alt="" class="img-responsive ">
+                        </div>
+                     </div>
+                     <div class="headDiv">
+                        <div class="head-box title">
+                           <div>
+                              <h1>LEADERBOARD</h1>
+                           </div>
+                        </div>
+                        <div class="ld-row mainBox">
+                           <div class="head-box breakdown">
+                              <div class="correct-answers">
+                                 <span class="correct-answers-text"></span>
+                                 <span class="icon"><img src="imgs/correctLeaderboard_Icon.svg" alt=""
+                                       class="img-responsive"></span>
+                              </div>
+                           </div>
+                           <div class="head-box breakdown">
+                              <div class="time-bonus">
+                                 <span class="time-bonus-text"></span>
+                                 <span class="icon"><img src="imgs/timeLeaderboard_Icon.svg" alt=""
+                                       class="img-responsive"></span>
+                              </div>
+                           </div>
+                           <div class="head-box totalBox">
+                              <div class="total-points"></div>
+                           </div>
+                        </div>
+                        <div class="head-box totalBox totalBoxFull">
+                           <div class="total-points"></div>
+                        </div>
+                     </div>
+                     <div class="leaderboard-list"></div>
+                     <div class="center">
+                        <button class="btns btns-middle" id="btn-restart" title=""><i class="fas fa-redo-alt"></i>
+                           Play
+                           again</button>
+                        <button class="btns btns-middle" id="btn-feedback" title="">View answers</button>
+                     </div>
+                     <div class="introText">
+                        <h2>Thank you for playing!</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+        <!-- slide -->
+        <div class="slide" id="slideAnswers">
+          <div class="feedback-list">
+            <div class="fill flex-wrap">
+              <div class="wrapper">
+                <div class="content">
+                  <div class="scroll">
+                    <ul id="feedback-list" class="list" tabindex="0"></ul>
+                  </div>
+                </div>
+                <br />
+                <div class="endNav">
+                  <button class="btns btns-middle btn-left btn-aveScore">
+                    View results
+                  </button>
+                  <button class="btns btns-middle" id="btn-restart2" title="">
+                    <i class="fas fa-redo-alt"></i> Play again
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fill layer55" id="countdownScreen">
+          <div class="black-transp3 fill"></div>
+          <div class="fill flex-wrap">
+            <div class="countdownTxt" role="timer" aria-live="polite" aria-atomic="true"></div>
+          </div>
+        </div>
+
+        <div class="popup fill layer55">
+          <div class="black-transp fill"></div>
+          <div class="fill flex-wrap">
+            <div class="wrapper">
+              <div class="content">
+                <div class="popup-box">
+                  <div class="text">
+                    <div class="message"></div>
+                    <div class="instruction-msg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fill avadoAdverts layer55">
+          <div class="avadoAdvert">
+            <div class="avadoAdImg"></div>
+          </div>
+          <div class="progressDiv">
+            <div class="progressBar"></div>
+          </div>
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              text-align: center;
+              width: 100%;
+              height: 145px;
+              font-size: 1.5em;
+              font-weight: bold;
+            "
+          >
+            Crunching all the numbers for the Leaderboard ...
+          </div>
+        </div>
+
+        <button
+          class="enabled interact btns"
+          id="btn-mute"
+          aria-label="Mute game audio"
+        >
+          <i class="fas fa-volume-up"></i>
+        </button>
+      </div>
+    </div>
+
+    <audio id="audioCorrect" class="audioMusic" data-volume="0.5">
+      <source src="audio/correct.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audioWrong" class="audioMusic" data-volume="0.7">
+      <source src="audio/wrong.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audioMusicQuestion" class="audioMusic" data-volume="0.7" loop>
+      <source src="audio/music_question.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audioMusicLoop" class="audioMusic" data-volume="0.5" loop>
+      <source src="audio/music_loop.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="lib/js/app.js"></script>
+    <script src="lib/js/quiz.js"></script>
+  </body>
+</html>

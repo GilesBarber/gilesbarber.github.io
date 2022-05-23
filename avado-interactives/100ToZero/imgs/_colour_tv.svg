@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9b9ba7;
+      }
+
+      .cls-2 {
+        fill: #efefef;
+      }
+
+      .cls-3 {
+        fill: #fc3;
+      }
+
+      .cls-4 {
+        fill: #3fc9e6;
+      }
+
+      .cls-5 {
+        fill: #00ea74;
+      }
+
+      .cls-6 {
+        fill: #ff5fa2;
+      }
+
+      .cls-7 {
+        fill: #ff5d54;
+      }
+
+      .cls-8 {
+        fill: #453878;
+      }
+
+      .cls-9 {
+        fill: #149bd7;
+      }
+
+      .cls-10 {
+        fill: #343438;
+      }
+
+      .cls-11 {
+        fill: #cacad4;
+      }
+
+      .cls-12 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="TV">
+    <g>
+      <rect class="cls-1" x="38.57" y="74.55" width="322.86" height="212.53" rx="6.92"/>
+      <g>
+        <rect class="cls-2" x="58.25" y="94.04" width="40.5" height="173.56"/>
+        <rect class="cls-3" x="98.75" y="94.04" width="40.5" height="173.56"/>
+        <rect class="cls-4" x="139.25" y="94.04" width="40.5" height="173.56"/>
+        <rect class="cls-5" x="179.75" y="94.04" width="40.5" height="173.56"/>
+        <rect class="cls-6" x="220.25" y="94.04" width="40.5" height="173.56"/>
+        <rect class="cls-7" x="260.75" y="94.04" width="40.5" height="173.56"/>
+        <rect class="cls-8" x="301.25" y="94.04" width="40.5" height="173.56"/>
+        <rect class="cls-9" x="58.25" y="245.73" width="40.5" height="21.87"/>
+        <rect class="cls-10" x="98.75" y="245.73" width="40.5" height="21.87"/>
+        <rect class="cls-10" x="179.75" y="245.73" width="40.5" height="21.87"/>
+        <rect class="cls-10" x="260.75" y="245.73" width="40.5" height="21.87"/>
+        <rect class="cls-6" x="139.25" y="245.73" width="40.5" height="21.87"/>
+        <rect class="cls-4" x="220.25" y="245.73" width="40.5" height="21.87"/>
+        <rect class="cls-11" x="301.25" y="245.73" width="40.5" height="21.87"/>
+      </g>
+      <rect class="cls-1" x="153.67" y="285.08" width="92.66" height="40.37"/>
+    </g>
+    <circle class="cls-12" cx="200" cy="297.38" r="4.24"/>
+  </g>
+</svg>

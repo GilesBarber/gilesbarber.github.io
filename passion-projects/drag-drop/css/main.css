@@ -1,0 +1,133 @@
+/*Variable declarations*/
+
+:root {
+	--dropZone-width:92%;
+	--kitten1:url('');
+	--kitten2:url('');
+	--kitten3:url('');
+	--drag-top:0;
+}
+
+/* Styles */
+/* Mobile First */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background: #FFF;
+	font-family: 'Lato',sans-serif;
+  }
+
+  h1{text-align: center}
+p{
+	font-size: 0.8em;
+}
+.footnote{
+	margin-top: 90%;	
+	width: 100%;
+	text-align: center;
+}
+	#content {
+			width: 100%;
+			height: 100%;
+			font-size: 12px;
+		}
+
+	#dragBoxes {
+			margin-top: 2em;
+			display:block;
+		}
+
+	#dropzones {
+			height: 500px;
+		}
+
+	.dropZone {
+			float: left;
+			width: var(--dropZone-width);
+   			min-width: 200px;
+			height: 110px;
+			padding: 10px;
+			border: 1px solid #aaaaaa;
+			margin: 5px 1%;
+		}
+
+	#drop1,
+	#drop2,
+	#drop3 {
+			background-size: 5%;
+			background-repeat: no-repeat;
+			background-position: top right;
+		}
+	#drop1::before{
+		content: "Bill Muray";
+	}
+	#drop2::before{
+		content: "Nicolas Cage";
+	}
+	#drop3::before{
+		content: "Kitten";
+	}
+
+	.drag {
+			background-color: #666;
+			color: transparent;
+			position: relative;
+			top: var(--drag-top);
+			height: 100px;
+			width: var(--dropZone-width);
+			cursor: pointer;
+			margin: 5px;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+	#drag1 {			
+			background-image: var(--kitten1)
+		}
+
+	#drag2 {
+			background-image: var(--kitten2)
+		}
+
+	#drag3 {
+			background-image: var(--kitten3)
+		}
+
+	.dropZone > div {width:100%}
+
+	.tick {
+			background-image: url(../images/icon-list-tick-green.svg)
+		}
+
+	.cross {
+			background-image: url(../images/red_cross.svg)
+		}
+
+	.show {
+			visibility: visible
+		}
+
+	#reset {
+			margin: 5px;
+			padding: 5px;
+			cursor: pointer;
+		}
+
+	#score {
+			margin: 5px;
+			padding: 5px;
+		}
+@media only screen and (min-width: 768px) {
+	/* For desktop: */
+	:root {
+		--dropZone-width:calc(100vw / 3 - 65px);
+		}
+		.footnote{
+			margin-top: 10%;	
+		}
+		#dropzones {
+			height: 200px;
+		}
+	}
