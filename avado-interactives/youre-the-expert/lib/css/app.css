@@ -281,7 +281,7 @@ h3 {
 }
 
 .slide3 {
-   background-image: url(../../imgs/_BG01.png);
+   background-image: url(../../imgs/BG01.png);
 }
 
 .slide-quiz {
@@ -898,7 +898,7 @@ h3 {
 }
 
 .user-avatar {
-   background-image: url(../../imgs/_Kiaro1.svg);
+   background-image: url(../../imgs/Kiaro1.svg);
    bottom: 20px;
    right: 20px;
 }
@@ -916,7 +916,7 @@ h3 {
 .crowns {
    width: 33.33%;
    height: 100%;
-   background-image: url(../../imgs/_Crown-Lives.svg);
+   background-image: url(../../imgs/Crown-Lives.svg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -935,11 +935,11 @@ h3 {
 }
 
 .game-over {
-   background-image: url(../../imgs/_GameOverBlur.png);
+   background-image: url(../../imgs/GameOverBlur.png);
 }
 
 .game-complete {
-   background-image: url(../../imgs/_LeaderboardBlur.png);
+   background-image: url(../../imgs/LeaderboardBlur.png);
 }
 
 .game-over-logo {

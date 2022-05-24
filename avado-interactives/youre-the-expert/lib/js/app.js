@@ -289,7 +289,7 @@ function driverLevelAnimate(pos1) {
    setTimeout(function () {
       if (pos1 == 1) {
          $('.driver img').fadeOut(40);
-         $('.driver img').attr("src", "imgs/_Kiaro.svg");
+         $('.driver img').attr("src", "imgs/Kiaro.svg");
          $('.driver img').css('transform', 'scale(0.7)');
          $('.bike').fadeIn(100);
          setTimeout(function () {

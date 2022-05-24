@@ -191,9 +191,9 @@ const pinPoints = {
       top: 52,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Morwenna1.svg',
-         correct: 'imgs/_Morwenna2.svg',
-         incorrect: 'imgs/_Morwenna3.svg'
+         charInit: 'imgs/Morwenna1.svg',
+         correct: 'imgs/Morwenna2.svg',
+         incorrect: 'imgs/Morwenna3.svg'
       }
    },
    9: {
@@ -201,9 +201,9 @@ const pinPoints = {
       top: 52,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Winona1.svg',
-         correct: 'imgs/_Winona2.svg',
-         incorrect: 'imgs/_Winona3.svg'
+         charInit: 'imgs/Winona1.svg',
+         correct: 'imgs/Winona2.svg',
+         incorrect: 'imgs/Winona3.svg'
       }
    },
    8: {
@@ -211,9 +211,9 @@ const pinPoints = {
       top: 182,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Paul1.svg',
-         correct: 'imgs/_Paul2.svg',
-         incorrect: 'imgs/_Paul3.svg'
+         charInit: 'imgs/Paul1.svg',
+         correct: 'imgs/Paul2.svg',
+         incorrect: 'imgs/Paul3.svg'
       }
    },
    7: {
@@ -221,9 +221,9 @@ const pinPoints = {
       top: 182,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Sarah1.svg',
-         correct: 'imgs/_Sarah2.svg',
-         incorrect: 'imgs/_Sarah3.svg'
+         charInit: 'imgs/Sarah1.svg',
+         correct: 'imgs/Sarah2.svg',
+         incorrect: 'imgs/Sarah3.svg'
       }
    },
    6: {
@@ -231,9 +231,9 @@ const pinPoints = {
       top: 182,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Lupe1.svg',
-         correct: 'imgs/_Lupe2.svg',
-         incorrect: 'imgs/_Lupe3.svg'
+         charInit: 'imgs/Lupe1.svg',
+         correct: 'imgs/Lupe2.svg',
+         incorrect: 'imgs/Lupe3.svg'
       }
    },
    5: {
@@ -241,9 +241,9 @@ const pinPoints = {
       top: 301,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Alice1.svg',
-         correct: 'imgs/_Alice2.svg',
-         incorrect: 'imgs/_Alice3.svg'
+         charInit: 'imgs/Alice1.svg',
+         correct: 'imgs/Alice2.svg',
+         incorrect: 'imgs/Alice3.svg'
       }
    },
    4: {
@@ -251,9 +251,9 @@ const pinPoints = {
       top: 301,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Eric1.svg',
-         correct: 'imgs/_Eric2.svg',
-         incorrect: 'imgs/_Eric3.svg'
+         charInit: 'imgs/Eric1.svg',
+         correct: 'imgs/Eric2.svg',
+         incorrect: 'imgs/Eric3.svg'
       }
    },
    3: {
@@ -261,9 +261,9 @@ const pinPoints = {
       top: 301,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Sunny1.svg',
-         correct: 'imgs/_Sunny2.svg',
-         incorrect: 'imgs/_Sunny3.svg'
+         charInit: 'imgs/Sunny1.svg',
+         correct: 'imgs/Sunny2.svg',
+         incorrect: 'imgs/Sunny3.svg'
       }
    },
    2: {
@@ -271,9 +271,9 @@ const pinPoints = {
       top: 301,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Matteo1.svg',
-         correct: 'imgs/_Matteo2.svg',
-         incorrect: 'imgs/_Matteo3.svg'
+         charInit: 'imgs/Matteo1.svg',
+         correct: 'imgs/Matteo2.svg',
+         incorrect: 'imgs/Matteo3.svg'
       }
    },
    1: {
@@ -281,9 +281,9 @@ const pinPoints = {
       top: 301,
       transform: 'scale(0.6)',
       character: {
-         charInit: 'imgs/_Bryan1.svg',
-         correct: 'imgs/_Bryan2.svg',
-         incorrect: 'imgs/_Bryan3.svg'
+         charInit: 'imgs/Bryan1.svg',
+         correct: 'imgs/Bryan2.svg',
+         incorrect: 'imgs/Bryan3.svg'
       }
    }
 };
