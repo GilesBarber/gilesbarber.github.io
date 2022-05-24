@@ -1,6 +1,6 @@
 const buttonStartText = ['Let’s do it!', 'I’m ready!', 'Bring it on!', 'Go!', 'Here we go!'];
 let cumulativeScores = [];
-let thisGreeting, thisIncorrect, thisCorrect, thisBossGreeting, thisBossIncorrect, thisBossCorrect, random, randomBoss;
+let pointsNext, thisGreeting, thisIncorrect, thisCorrect, thisBossGreeting, thisBossIncorrect, thisBossCorrect, random, randomBoss;
 let totalScripts = Object.size(charScripts);
 let totalBossScripts = Object.size(bossScripts);
 const alphabet = ['', 'A', 'B', 'C', 'D'];
@@ -869,9 +869,9 @@ function gotoResults() {
    for (let i = 1; i <= usersTotal; i++) {
       n++;
       if (leaderboard[i + 1] === void(0)) {
-         let pointsNext = 0;
+         pointsNext = 0;
       } else {
-         let pointsNext = leaderboard[i + 1].points;
+         pointsNext = leaderboard[i + 1].points;
       }
 
       if (totalpoints >= leaderboard[i].points && userNotPlacedYet) {
