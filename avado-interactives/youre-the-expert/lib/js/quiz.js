@@ -124,22 +124,22 @@ function initQuiz() {
          } else {
 
             if (qNum < 2) {
-               $("#sceneIMG").attr("src", "imgs/_S1T.png");
+               $("#sceneIMG").attr("src", "imgs/S1T.png");
                animateStep(pinPoints[qNum + 1]);
             } else if (qNum == 3) {
-               $(".slide3").css('background-image', 'url(imgs/_BG01.png)');
+               $(".slide3").css('background-image', 'url(imgs/BG01.png)');
                animateStep(pinPoints[qNum + 1]);
             } else if (qNum == 5) {
                driverLevelAnimate(2);
-               $(".slide3").css('background-image', 'url(imgs/_BG03.png)');
+               $(".slide3").css('background-image', 'url(imgs/BG03.png)');
                setTimeout(function () {
-                  $("#sceneIMG").attr("src", "imgs/_S2T.png");
+                  $("#sceneIMG").attr("src", "imgs/S2T.png");
                }, 1000);
             } else if (qNum == 8) {
                driverLevelAnimate(3);
-               $(".slide3").css('background-image', 'url(imgs/_BG04.png)')
+               $(".slide3").css('background-image', 'url(imgs/BG04.png)')
                setTimeout(function () {
-                  $("#sceneIMG").attr("src", "imgs/_S3T.png");
+                  $("#sceneIMG").attr("src", "imgs/S3T.png");
                }, 1000);
             } else {
                animateStep(pinPoints[qNum + 1]);
@@ -318,7 +318,7 @@ function initQuiz() {
          $('.countdown').addClass('displaySeconds');
       }
 
-      $(".slide3").css('background-image', 'url(imgs/_BG02.png)')
+      $(".slide3").css('background-image', 'url(imgs/BG02.png)')
 
       generateNextBtn();
       currentQuestion = 1;
@@ -343,9 +343,9 @@ function initQuiz() {
       $('.textbox,.bike').hide();
       currentPoint = 0;
       currentQuestion = 0;
-      $('.driver img').attr("src", "imgs/_KiaroBike.svg");
+      $('.driver img').attr("src", "imgs/KiaroBike.svg");
       $('.driver img').css('transform', 'scale(2.1)');
-      $('#sceneIMG').attr("src", "imgs/_LightsOff.png");
+      $('#sceneIMG').attr("src", "imgs/LightsOff.png");
 
       $('.driver').css({
          left: "-118px",
@@ -400,7 +400,7 @@ function initQuiz() {
          $('#srQfeedback').text("Correct");
          $('.qFeedback').addClass("correct");
          $('.question-avatar').css('background-image', 'url(' + pinPoints[qNum].character.correct + ')');
-         $('.user-avatar').css('background-image', 'url(imgs/_Kiaro2.svg)');
+         $('.user-avatar').css('background-image', 'url(imgs/Kiaro2.svg)');
          $('.character .charCorrect').show();
          $('.correctIcon').show();
          userStats.scoreCounter += scorePointsDefault;
@@ -436,7 +436,7 @@ function initQuiz() {
          }
 
          $('.question-avatar').css('background-image', 'url(' + pinPoints[qNum].character.incorrect + ')');
-         $('.user-avatar').css('background-image', 'url(imgs/_Kiaro3.svg)');
+         $('.user-avatar').css('background-image', 'url(imgs/Kiaro3.svg)');
          loseCrown();
 
       }
@@ -514,7 +514,7 @@ function initQuiz() {
    $("#livesCount").text(defaultAttempts);
 
    function loseCrown() {
-      $(".crowns:nth-of-type(" + attempts + ")").css("background-image", "url(imgs/_Crown-LivesBW.svg)");
+      $(".crowns:nth-of-type(" + attempts + ")").css("background-image", "url(imgs/Crown-LivesBW.svg)");
       --attempts
       $("#livesCount").text(attempts);
       setTimeout(() => {
@@ -730,14 +730,14 @@ function startQuestion() {
    selected = [];
    if (qNum == 1) {
       setTimeout(function () {
-         $("#sceneIMG").attr("src", "imgs/_S1T.png");
+         $("#sceneIMG").attr("src", "imgs/S1T.png");
       }, 500);
 
    }
 
 
    enableBtn($('.options'));
-   $('.user-avatar').css('background-image', 'url(imgs/_Kiaro1.svg)');
+   $('.user-avatar').css('background-image', 'url(imgs/Kiaro1.svg)');
 
    $('.black-overlay').stop(true, true).hide();
 
