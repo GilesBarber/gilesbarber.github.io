@@ -252,34 +252,34 @@ questionBank[10] = {
 
 const prizeBank = [{
    prizeName: "Smart TV",
-   imageURL: "imgs/_colour_tv.svg",
+   imageURL: "imgs/colour_tv.svg",
    feedBackText: '',
 }, {
    prizeName: "Fondue",
-   imageURL: "imgs/_fondue.svg",
+   imageURL: "imgs/fondue.svg",
    feedBackText: '',
 }, {
    prizeName: "Headphones",
-   imageURL: "imgs/_headphones.svg",
+   imageURL: "imgs/headphones.svg",
    feedBackText: '',
 }, {
    prizeName: "Clock",
-   imageURL: "imgs/_alarm_clock.svg",
+   imageURL: "imgs/alarm_clock.svg",
    feedBackText: '',
 }, {
    prizeName: "DVD Box set",
-   imageURL: "imgs/_dvd_boxset.png",
+   imageURL: "imgs/dvd_boxset.png",
    feedBackText: '',
 }, {
    prizeName: "Dressing Gown",
-   imageURL: "imgs/_dressing_gown.svg",
+   imageURL: "imgs/dressing_gown.svg",
    feedBackText: '',
 }, {
    prizeName: "Carving knife",
-   imageURL: "imgs/_carving_knife.svg",
+   imageURL: "imgs/carving_knife.svg",
    feedBackText: '',
 }, {
    prizeName: "Salt & Pepper",
-   imageURL: "imgs/_salt_&_pepper.svg",
+   imageURL: "imgs/salt_pepper.svg",
    feedBackText: '',
 }];
