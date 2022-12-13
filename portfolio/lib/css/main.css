@@ -368,11 +368,11 @@ section {
 .about-stats .progress-bars .progress-bar .progress-con .progress .javascript {
   /* width: 80%;*/
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .jquery {
+.about-stats .progress-bars .progress-bar .progress-con .progress .jquery, .about-stats .progress-bars .progress-bar .progress-con .progress .vue {
   /* width: 75%; */
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  /* width: 50%; */
+.about-stats .progress-bars .progress-bar .progress-con .progress .react, .about-stats .progress-bars .progress-bar .progress-con .progress .typescript {
+  /* width: 55%; */
 }
 
 .stats-title {
@@ -722,7 +722,6 @@ section {
   header {
     padding: 0 !important;
   }
-
   .section {
     padding: 7rem 11rem;
   }
@@ -734,15 +733,12 @@ section {
   .about-container .right-about {
     padding-top: 2.5rem;
   }
-
   .commercial-projects .portfolio-container {
     grid-template-columns: 1fr 1fr;
   }
-
   .passion-projects .portfolio-container {
     grid-template-columns: 1fr 1fr;
   }
-
   .main-title h2 {
     font-size: 4rem;
   }
@@ -757,11 +753,9 @@ section {
   .section {
     padding: 7rem 6rem;
   }
-
   header {
     padding: 0;
   }
-
   .header-content {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
@@ -782,7 +776,6 @@ section {
   .header-content .right-header .name {
     font-size: 2.5rem;
   }
-
   .controls {
     top: auto;
     bottom: 0;
@@ -801,15 +794,12 @@ section {
   .section {
     padding: 7rem 3rem;
   }
-
   .header-content .right-header {
     margin: 1rem auto 0;
   }
-
   .about-stats .progress-bars {
     grid-template-columns: 1fr;
   }
-
   .main-title h2 {
     font-size: 3rem;
   }
@@ -822,7 +812,6 @@ section {
     width: 50px;
     height: 50px;
   }
-
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -836,16 +825,13 @@ section {
     grid-template-columns: 1fr;
     padding-top: 2.5rem;
   }
-
   .timeline {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
-
   .about-stats .progress-bars {
     grid-template-columns: 1fr;
   }
-
   .commercial-projects {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
@@ -854,7 +840,6 @@ section {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
-
   .passion-projects {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
@@ -863,7 +848,6 @@ section {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
-
   .contact-content-container {
     flex-direction: column;
   }
@@ -871,7 +855,6 @@ section {
     margin-left: 0;
     margin-top: 2.5rem;
   }
-
   .main-title h2 {
     font-size: 2rem;
   }
@@ -881,7 +864,6 @@ section {
   .main-title h2 .bg-text {
     font-size: 3rem;
   }
-
   .section {
     padding: 2rem 2.5rem;
   }
