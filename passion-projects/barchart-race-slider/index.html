@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3js Data Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Top countries by GDP</h3>
+        <div class="svg-container"></div>
+    <div class="range-slider">
+    <input type="range" min="0" max="10" value="0" id="range1" name="year" class="slider">
+    </div>
+    <label for="year">Slide to change decade</label>
+    </div>
+    
+    <script>
+
+        const data = d3.json("data.json")
+
+        const slider = document.querySelector('#range1')
+        let sliderVal = parseInt(slider.value)
+
+        // set the dimensions and margins of the graph
+        const margin = { top: 20, right: 20, bottom: 70, left: 90 };
+        const width = 600 - margin.left - margin.right;
+        const height = 400 - margin.top - margin.bottom;
+
+        const widthScale = d3.scaleLinear()
+                        .domain([0, 100])
+                        .range([0, width])
+
+        const color = d3.scaleLinear()
+                        .domain([0, 10])
+                        .range(["red", "blue"])
+
+        const axis = d3.axisBottom()
+                    .ticks(10)
+                    .scale(widthScale)
+
+        const canvas = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .append("g")
+                    .attr("transform", "translate(20, 0)")
+
+
+    // append the svg object to the body of the page
+    const svg = d3.select(".svg-container")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+   
+
+    data.then(
+        (dataArray) => {
+
+    // X axis
+        const x = d3.scaleLinear()
+        .range([0, width])
+        .domain([0, 22000])
+        svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+            .attr("transform", "translate(-10,0)rotate(-45)")
+            .style("text-anchor", "end");
+
+    // Add Y axis
+        const y = d3.scaleBand()
+            .domain(dataArray.data.map(d => d.country))
+        .range([0, height])
+        .padding(0.2);
+        svg.append("g")
+        .call(d3.axisLeft(y));
+
+    // Bars
+    svg.selectAll("mybar")
+      .data(dataArray.data)
+      .enter()
+      .append("rect")
+        .attr("y", (d, i) => i * 31)//y(i * 30))
+        .attr("x", x(0))
+        .attr("width",  d=> x(d.data[sliderVal].gdp))
+        .attr("height", y.bandwidth())
+        .attr("fill", (d,i) => color(i) )
+        .attr("class", "gdp")
+            
+    svg.selectAll("bars")
+    .data(dataArray.data)
+        .enter()
+        .append("text")
+                .attr("x", d => x(d.data[sliderVal].gdp + 20))
+                .attr("y", (d, i) => i * 30.5)
+                .attr("dy", "20px")
+                .attr("dx", d => x(d.data[sliderVal].gdp + 1350))
+                .attr("fill", "black")
+                .attr("text-anchor", "end")
+                .attr("class", "gdpNum")
+                .style("font-size", "12px")
+                .text(d => d.data[sliderVal].gdp)
+
+
+        slider.addEventListener("change", handleChange)
+
+        function handleChange(e){
+        sliderVal = parseInt(slider.value)
+        d3.selectAll("rect")
+                .transition()
+                    .attr("width",  d=> x(d.data[sliderVal].gdp))
+                    .duration(500)
+                    
+        legend.innerHTML = `Year: ${dataArray.data[0].data[sliderVal].year}`
+
+        svg.selectAll(".gdpNum")
+            .data(dataArray.data)
+                .attr("x", d => x(d.data[sliderVal].gdp))
+                .attr("dx", "43px")
+                .text(d => d.data[sliderVal].gdp)
+
+        svg.selectAll(".gdpNum")
+            .data(dataArray.data)
+            .enter()
+            .text("")
+            .text(d => d.data[sliderVal].gdp)
+        }
+
+    svg.append("text")
+      .attr("x", (width - 80))
+      .attr("y", (height - 50))
+      .attr("class", "legend")
+      .text(`Year: ${dataArray.data[0].data[sliderVal].year}`)
+            .attr("text-anchor", "right")   
+
+    const legend = document.querySelector(".legend")
+
+    svg.append("text")
+      .attr("x", (width / 2))
+      .attr("y", (height + 60))
+      .text("Billion USD")
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+
+        },
+  error => console.log(error)
+    )
+
+    </script>
+</body>
+</html>
